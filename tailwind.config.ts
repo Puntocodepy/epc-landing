@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss";
+import type {Config} from 'tailwindcss';
 
 const config: Config = {
-    darkMode: ["class"],
-    content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  darkMode: ['class'],
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
   	extend: {
@@ -55,9 +55,30 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		container: {
+  			screens: {
+  				'2xl': '1320px'
+  			},
+  			center: 'true'
+  		},
+  		animation: {
+  			ripple: 'ripple 0.6s ease-out'
+  		},
+  		keyframes: {
+  			ripple: {
+  				'0%': {
+  					transform: 'scale(0)',
+  					opacity: '1'
+  				},
+  				'100%': {
+  					transform: 'scale(4)',
+  					opacity: '0'
+  				}
+  			}
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require('tailwindcss-animate')],
 };
 export default config;

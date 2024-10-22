@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/Domine-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+// Fuente Regular
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/static/Domine-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Fuente Medium
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/static/Domine-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Fuente SemiBold
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/static/Domine-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+// Fuente Bold
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/static/Domine-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-domine { font-family: 'Domine', serif;}
