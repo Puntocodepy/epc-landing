@@ -3,7 +3,7 @@ import { AnimatedButton } from '@/components/ui/animated-button';
 
 const HeroComponent = () => {
   return (
-    <section className="hero bg-[url('/images/background.webp')] bg-center bg-cover bg-no-repeat">
+    <section id="home" className="hero bg-[url('/images/background.webp')] bg-center bg-cover bg-no-repeat">
       <NavbarComponent />
       <div className="container px-10 grid lg:grid-cols-2 gap-4">
         <div className="flex flex-col justify-center">

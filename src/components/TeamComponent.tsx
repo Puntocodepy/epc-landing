@@ -26,7 +26,7 @@ const TeamComponent = () => {
   ];
 
   return (
-    <section className="bg-secondary py-12 lg:py-20">
+    <section id="teams" className="bg-secondary py-12 lg:py-20">
       <div className="container text-center px-10">
         <h2 className="sub-title">Nuestros Equipo</h2>
         <p className="lg:px-40 mb-8">
@@ -35,8 +35,8 @@ const TeamComponent = () => {
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
           {teams.map((team) => (
-            <div className="flex flex-col">
-              <Card key={team.id} className="card-image mb-6">
+            <div key={team.id} className="flex flex-col">
+              <Card className="card-image mb-6">
                 {/*<CardImage*/}
                 {/*  src="/images/team.webp"*/}
                 {/*  alt="team"*/}

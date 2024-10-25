@@ -12,7 +12,7 @@ const WorksComponent = () => {
 
 
   return (
-    <section className="works py-12 lg:py-20">
+    <section id="works" className="works py-12 lg:py-20">
       <div className="container text-center px-10">
         <h2 className="sub-title">Obras</h2>
         <p className="lg:px-40 mb-8">

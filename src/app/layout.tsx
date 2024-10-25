@@ -13,7 +13,7 @@ export default function RootLayout({children}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"

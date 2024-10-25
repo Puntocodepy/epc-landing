@@ -10,7 +10,7 @@ const ServicesComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="services bg-secondary py-12 lg:py-20">
+    <section id="services" className="services bg-secondary py-12 lg:py-20">
       <div className="container text-center px-10">
         <h2 className="sub-title">Nuestros servicios</h2>
         <p className="lg:px-40 mb-8">
