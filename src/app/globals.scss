@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "../assets/scss/variables";
+@import "~boxicons/css/boxicons.min.css";
 
 @layer utilities {
   .text-balance {
@@ -41,7 +42,6 @@
     --popover-foreground: 262 5% 90%;
     --primary: 262 0% 100%;
     --primary-foreground: 0 0% 0%;
-    //--secondary: 262 30% 10%;
     --secondary: 0 0% 9%;
     --secondary-foreground: 0 0% 100%;
     --muted: 224 30% 15%;
@@ -64,4 +64,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.sub-title {
+  @apply mb-4 text-3xl lg:text-4xl font-bold;
 }
