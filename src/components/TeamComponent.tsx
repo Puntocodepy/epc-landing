@@ -1,29 +1,10 @@
 import {Card} from '@/components/ui/card';
+import Image from 'next/image';
+import {getTeams} from '@/apis/teams.api';
 
 const TeamComponent = () => {
 
-  const teams = [
-    {
-      id: 1,
-      name: 'JAZMÍN SUÁREZ',
-      description: ['Ingeniera Civil', 'Depto. Financiero', 'Obras'],
-    },
-    {
-      id: 2,
-      name: 'ANTONIO RAMOS',
-      description: ['Ingeniero Civil', 'Depto. Técnico', 'Obras'],
-    },
-    {
-      id: 3,
-      name: 'PABLO MARTÍNEZ',
-      description: ['Depto. Técnico', 'Obras'],
-    },
-    {
-      id: 4,
-      name: 'EZVALO',
-      description: ['Administración Tercerizada'],
-    }
-  ];
+  const teams = getTeams();
 
   return (
     <section id="teams" className="bg-secondary py-12 lg:py-20">
@@ -33,18 +14,18 @@ const TeamComponent = () => {
           EPC EAS está liderada por expertos con años de experiencia en los proyectos más desafiantes del país.
         </p>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
           {teams.map((team) => (
-            <div key={team.id} className="flex flex-col">
-              <Card className="card-image mb-6">
-                {/*<CardImage*/}
-                {/*  src="/images/team.webp"*/}
-                {/*  alt="team"*/}
-                {/*  className="rounded-full"*/}
-                {/*/>*/}
-              </Card>
+            <div key={team.id} className="flex flex-col gap-3 items-center md:items-start">
+              <Image
+                src={team.image}
+                alt={team.name}
+                width={200}
+                height={200}
+              />
+
               <div className="flex flex-col items-start">
-                <h3 className="text-xl font-bold mb-4">{team.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{team.name}</h3>
                 {team.description.map((description, index) => (
                   <p key={index} className="text-gray-100">{description}</p>
                 ))}

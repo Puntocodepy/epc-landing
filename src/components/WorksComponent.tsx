@@ -6,10 +6,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import {getWorks} from '@/apis/works.ap';
 
 
 const WorksComponent = () => {
-
+  const works = getWorks();
 
   return (
     <section id="works" className="works py-12 lg:py-20">
@@ -24,15 +25,24 @@ const WorksComponent = () => {
 
           <Carousel className="w-full">
             <CarouselContent>
-              {Array.from({length: 8}).map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-3xl font-semibold">{index + 1}</span>
-                      </CardContent>
-                    </Card>
-                  </div>
+              {works.map((work) => (
+                <CarouselItem key={work.id} className="md:basis-1/2 lg:basis-1/4">
+                  <Card className="relative rounded-lg overflow-hidden border border-black">
+                    {/* Imagen de fondo */}
+                    <div
+                      className="absolute inset-0 bg-center bg-cover bg-no-repeat"
+                      style={{ backgroundImage: `url(${work.image})` }}
+                    />
+
+                    {/* Capa de degradado */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+
+                    {/* Contenido del card */}
+                    <CardContent className="relative h-96 p-4 flex flex-col justify-end z-10">
+                      <h3 className="text-xl font-bold text-white mb-1">{work.name}</h3>
+                      <p className="text-gray-100 text-sm mb-6">{work.description}</p>
+                    </CardContent>
+                  </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>

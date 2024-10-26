@@ -41,12 +41,12 @@ const ContactComponent = () => {
           <p className="text-xs">
             {new Date().getFullYear()} EPC EAS® - Todos los derechos reservados.
           </p>
-          <p className="flex text-xs gap-1 items-center justify-center">
+          <p className="flex text-xs items-end justify-center">
             Desarrollado por
             <a href="https://puntocode.com.py" target="_blank">
               <Image
                 loading="lazy"
-                src="/images/puntocode.svg"
+                src="/images/puntocode-logo.svg"
                 width={80}
                 height={15}
                 alt="Puntocode"
