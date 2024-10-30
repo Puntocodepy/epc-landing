@@ -1,5 +1,7 @@
 import {AnimatedButton} from '@/components/ui/animated-button';
 import Icon from '@/components/ui/Icon';
+import ButtonBudget from '@/components/shared/button-budget';
+import React from 'react';
 
 const CtaComponent = () => {
   return (
@@ -17,9 +19,7 @@ const CtaComponent = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 mt-6 lg:mt-0">
-            <AnimatedButton className="p-6 min-w-72 lg:min-w-60" variant="outline">
-              Solicita tu presupuesto gratuito
-            </AnimatedButton>
+            <ButtonBudget isOutline={true} />
             <AnimatedButton className="p-6 border min-w-72 lg:min-w-60 bg-gray-50">
               <Icon name="bxl-whatsapp" />
               Contácta con un técnico

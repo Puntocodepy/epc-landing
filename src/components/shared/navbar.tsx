@@ -1,17 +1,8 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import MenuSheet from '@/components/shared/menu-sheet';
 import {useEffect, useState} from 'react';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {AnimatedButton} from '@/components/ui/animated-button';
-import {Menu} from 'lucide-react';
 
 
 const NavbarComponent = () => {
@@ -58,42 +49,27 @@ const NavbarComponent = () => {
 
           <div className="!visible mt-2 hidden items-center lg:!flex">
             <ul className="list-none flex gap-10">
-              <li className={activeSection === 'home' ? 'font-bold' : ''}>
+              <li className={activeSection === 'home' ? 'active' : ''}>
                 <Link href="#home">Inicio</Link>
               </li>
-              <li className={activeSection === 'services' ? 'font-bold' : ''}>
+              <li className={activeSection === 'services' ? 'active' : ''}>
                 <Link href="#services">Servicios</Link>
               </li>
-              <li className={activeSection === 'works' ? 'font-bold' : ''}>
+              <li className={activeSection === 'works' ? 'active' : ''}>
                 <Link href="#works">Obras</Link>
               </li>
-              <li className={activeSection === 'teams' ? 'font-bold' : ''}>
+              <li className={activeSection === 'teams' ? 'active' : ''}>
                 <Link href="#teams">Equipo</Link>
               </li>
-              <li className={activeSection === 'contact' ? 'font-bold' : ''}>
+              <li className={activeSection === 'contact' ? 'active' : ''}>
                 <Link href="#contact">Contacto</Link>
               </li>
             </ul>
           </div>
 
           <div className="lg:hidden">
-            <Sheet>
-              <SheetTrigger>
-                <Menu />
-              </SheetTrigger>
-              <SheetContent>
-                <SheetHeader>
-                  <SheetTitle>Are you absolutely sure?</SheetTitle>
-                  <SheetDescription>
-                    This action cannot be undone. This will permanently delete your account
-                    and remove your data from our servers.
-                  </SheetDescription>
-                </SheetHeader>
-              </SheetContent>
-            </Sheet>
+            <MenuSheet />
           </div>
-
-
         </div>
       </div>
     </nav>

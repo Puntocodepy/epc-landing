@@ -1,5 +1,5 @@
 'use client';
-import ServiceCard from '@/components/ui/service-card';
+import ServiceCard from '@/components/shared/service-card';
 import {ChevronDown, ChevronUp} from 'lucide-react';
 import {Collapsible,  CollapsibleContent,  CollapsibleTrigger} from '@/components/ui/collapsible';
 import {getServices} from '@/apis/services.api';

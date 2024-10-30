@@ -1,5 +1,5 @@
-import NavbarComponent from '@/components/ui/navbar';
-import { AnimatedButton } from '@/components/ui/animated-button';
+import NavbarComponent from '@/components/shared/navbar';
+import ButtonBudget from '@/components/shared/button-budget';
 
 const HeroComponent = () => {
   return (
@@ -17,9 +17,7 @@ const HeroComponent = () => {
             Ofrecemos soluciones de construcción que garantizan durabilidad, precisión y ahorro para tus proyectos más ambiciosos.
           </p>
 
-          <AnimatedButton className="max-w-96 py-6">
-            Solicita tu presupuesto gratuito
-          </AnimatedButton>
+          <ButtonBudget />
         </div>
       </div>
     </section>
