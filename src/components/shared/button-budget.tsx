@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, {useState} from 'react';
 
 //Imports to Form
 import { z } from 'zod';
@@ -28,14 +28,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import {Loader2} from 'lucide-react';
+import {showToast} from '@/lib/toast';
 
 type BudgetProps = {
   isOutline: boolean;
 }
 
-const ButtonBudget: React.FC<BudgetProps> = ({isOutline = false}) => {
+const ButtonBudget: React.FC<BudgetProps> = ({isOutline}) => {
 
   const btnClass: string = isOutline ? 'p-6 min-w-72 lg:min-w-60' : 'max-w-96 py-6';
+  const [isSending, setIsSending] = useState(false);
 
   const formSchema = z.object({
     name: z.string().min(2, {
@@ -52,12 +55,21 @@ const ButtonBudget: React.FC<BudgetProps> = ({isOutline = false}) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '', email: 'test@mail.com', project: ''
+      name: '', email: '', project: ''
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    setIsSending(true); // Activa el estado de envío
+
+    // Simula el envío con un timeout
+    setTimeout(() => {
+      console.log(values);
+      setIsSending(false);
+      //form reset
+      form.reset();
+      showToast('¡Solicitud enviada con éxito! Nos pondremos en contacto contigo pronto.');
+    }, 1500);
   }
 
   return (
@@ -125,7 +137,10 @@ const ButtonBudget: React.FC<BudgetProps> = ({isOutline = false}) => {
               />
             </div>
             <DialogFooter>
-              <Button type="submit">Enviar</Button>
+              <Button type="submit" disabled={isSending}>
+                {isSending && <Loader2 className="animate-spin" />}
+                {isSending ? 'Enviando...' : 'Enviar'}
+              </Button>
             </DialogFooter>
           </form>
         </Form>

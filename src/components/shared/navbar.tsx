@@ -21,12 +21,14 @@ const NavbarComponent = () => {
 
     sections.forEach((id) => {
       const section = document.getElementById(id);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       section && observer.observe(section);
     });
 
     return () => {
       sections.forEach((id) => {
         const section = document.getElementById(id);
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         section && observer.unobserve(section);
       });
     };

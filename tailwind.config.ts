@@ -60,7 +60,7 @@ const config: Config = {
   			screens: {
   				'2xl': '1320px'
   			},
-  			center: 'true'
+  			center: true
   		},
   		animation: {
   			ripple: 'ripple 0.6s ease-out'

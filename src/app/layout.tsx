@@ -1,7 +1,8 @@
 import '../assets/scss/app.scss';
 import './globals.scss';
 import type {Metadata} from 'next';
-import {ThemeProvider} from '@/providers/theme-provider';
+import {ThemeProvider} from '@/providers/theme.provider';
+import {ToastProvider} from '@/providers/toastify.provider';
 
 
 export const metadata: Metadata = {
@@ -21,7 +22,9 @@ export default function RootLayout({children}: Readonly<{
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <ToastProvider>
+            {children}
+          </ToastProvider>
         </ThemeProvider>
       </body>
     </html>

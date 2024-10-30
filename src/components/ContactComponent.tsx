@@ -21,21 +21,25 @@ const ContactComponent = () => {
             </p>
 
             <div className="flex gap-1 mt-3">
-              <Icon name="bxl-instagram" size="1.2rem" />
-              <Icon name="bxl-linkedin" size="1.2rem" />
+              <a href="https://www.instagram.com/epceas/" target="_blank">
+                <Icon name="bxl-instagram" size="1.2rem"/>
+              </a>
+              <a href="https://puntocode.com.py" target="_blank">
+                <Icon name="bxl-linkedin" size="1.2rem"/>
+              </a>
             </div>
           </div>
 
           {/*  Contactanos ----------------------*/}
           <div className="flex flex-col justify-end mt-4 md:mt-0 md:items-end">
             <h3 className="text-lg font-bold mb-4">Contáctanos</h3>
-            <p className="text-xs mb-1">+595 976 549 903</p>
-            <p className="text-xs mb-1">presupuestos@epc.com.py</p>
+            <a className="text-xs mb-1" href="tel:+595976549903">+595 976 549 903</a>
+            <a className="text-xs mb-1" href="mailto:presupuestos@epc.com.py">presupuestos@epc.com.py</a>
             <p className="text-xs mb-1">Direccion particular con enlace al mapa</p>
           </div>
         </div>
 
-        <Separator className="my-8 bg-gray-400" />
+        <Separator className="my-6 bg-gray-400" />
 
         <div className="flex flex-col md:flex-row text-center justify-between">
           <p className="text-xs">

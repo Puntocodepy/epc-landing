@@ -17,7 +17,7 @@ const HeroComponent = () => {
             Ofrecemos soluciones de construcción que garantizan durabilidad, precisión y ahorro para tus proyectos más ambiciosos.
           </p>
 
-          <ButtonBudget />
+          <ButtonBudget isOutline={false} />
         </div>
       </div>
     </section>
