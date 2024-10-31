@@ -4,7 +4,7 @@ import {Separator} from '@/components/ui/separator';
 
 const ContactComponent = () => {
   return (
-    <section id="contact" className="services bg-secondary py-12 lg:py-20">
+    <section id="contact" className="services py-12 lg:py-20">
       <div className="container px-10">
         <div className="grid md:grid-cols-2 gap-4">
 
@@ -45,7 +45,7 @@ const ContactComponent = () => {
           <p className="text-xs">
             {new Date().getFullYear()} EPC EAS® - Todos los derechos reservados.
           </p>
-          <p className="flex text-xs items-end justify-center">
+          <p className="flex text-xs items-center justify-center">
             Desarrollado por
             <a href="https://puntocode.com.py" target="_blank">
               <Image
