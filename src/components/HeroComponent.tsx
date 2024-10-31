@@ -3,7 +3,7 @@ import ButtonBudget from '@/components/shared/button-budget';
 
 const HeroComponent = () => {
   return (
-    <section id="home" className="hero bg-[url('/images/background.webp')] bg-center bg-cover bg-no-repeat">
+    <section id="home" className="hero">
       <NavbarComponent />
       <div className="container px-10 grid lg:grid-cols-2 gap-4">
         <div className="flex flex-col justify-center">
